@@ -20,15 +20,24 @@
             <version>0.12.0</version>
             <scope>compile</scope>
         </dependency>
+        <!-- We need slf4j api because we're using the @Slf4j anotation from lombok -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.5</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
             <version>2.2.3</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
             <version>5.0.1.Final</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>io.dropwizard</groupId>
@@ -38,7 +47,7 @@
             <groupId>org.mongodb</groupId>
             <artifactId>mongo-java-driver</artifactId>
             <version>2.11.3</version>
-            <optional>true</optional>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
