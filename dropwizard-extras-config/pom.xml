@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>extras-config</artifactId>
+    <artifactId>dropwizard-extras-config</artifactId>
     <name>Dropwizard Configuration Extras</name>
     <description>Dropwizard Configuration Extras is a collection of useful Configuration classes for the Dropwizard Project.</description>
 
