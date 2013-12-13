@@ -25,7 +25,11 @@ public class HandlebarsViewRenderer implements ViewRenderer {
     private final Handlebars handlebars;
 
     public HandlebarsViewRenderer() {
-        this.handlebars = new Handlebars().with(new ClassPathTemplateLoader(StringUtils.EMPTY, StringUtils.EMPTY)).with(new HighConcurrencyTemplateCache());
+        this(new Handlebars().with(new ClassPathTemplateLoader(StringUtils.EMPTY, StringUtils.EMPTY)).with(new HighConcurrencyTemplateCache()));
+    }
+
+    public HandlebarsViewRenderer(Handlebars handlebars) {
+        this.handlebars = handlebars;
     }
 
     @Override
