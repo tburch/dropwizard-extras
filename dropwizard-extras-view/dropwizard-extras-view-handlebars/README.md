@@ -1,4 +1,4 @@
-##Enable [Handlebars](http://handlebarsjs.com/) views for your service:
+##Enable [Handlebars](http://handlebarsjs.com/) views for your Dropwizard service:
 
 Add the "dropwizard-extras-view-handlebars" dependency:
 
