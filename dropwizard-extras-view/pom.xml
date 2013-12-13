@@ -7,9 +7,15 @@
         <groupId>com.lowtuna.dropwizard-extras</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
+    <packaging>pom</packaging>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>dropwizard-extras-views</artifactId>
+    <artifactId>dropwizard-extras-view</artifactId>
+    <name>Dropwizard View Extras</name>
+    <description>Dropwizard View Extras is a collection of useful bundles for rendering views</description>
 
+    <modules>
+        <module>dropwizard-extras-view-handlebars</module>
+    </modules>
 
 </project>

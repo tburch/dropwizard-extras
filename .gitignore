@@ -4,3 +4,4 @@
 *.jar
 *.war
 *.ear
+dropwizard-extras-view/dropwizard-extras-view-handlebars/target
