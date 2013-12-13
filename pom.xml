@@ -14,7 +14,8 @@
 
     <modules>
         <module>dropwizard-extras-config</module>
-        <module>dropwizard-extras-views</module>
+        <module>dropwizard-extras-view</module>
+        <module>dropwizard-extras-view-handlebars</module>
     </modules>
 
     <properties>
