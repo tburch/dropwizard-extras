@@ -8,7 +8,7 @@ Add the "dropwizard-extras-view-handlebars" dependency:
     	<version>1.0.0-SNAPSHOT</version>
  	</dependency>
 
-If you want to use a specific instance of Handlebars (so you can use your own Helpers, TemplateCache, etc.), add the ViewBundle with the HandlebarsInstance in the initialize method of your Service class:
+If you want to use a specific instance of Handlebars (so you can use your own Helpers, TemplateCache, etc.), add the ViewBundle with the Handlebars instance in the initialize method of your Service class:
 
 	public void initialize(Bootstrap<MyConfiguration> bootstrap) {
  		Handlebars hbs = 
