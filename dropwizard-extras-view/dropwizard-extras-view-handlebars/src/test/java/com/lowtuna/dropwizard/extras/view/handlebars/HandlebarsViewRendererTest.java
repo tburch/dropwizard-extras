@@ -6,6 +6,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import com.codahale.metrics.MetricRegistry;
+import com.google.common.collect.ImmutableList;
 import com.sun.jersey.api.client.UniformInterfaceException;
 import com.sun.jersey.api.core.DefaultResourceConfig;
 import com.sun.jersey.test.framework.AppDescriptor;
@@ -13,6 +14,7 @@ import com.sun.jersey.test.framework.JerseyTest;
 import com.sun.jersey.test.framework.LowLevelAppDescriptor;
 import io.dropwizard.logging.LoggingFactory;
 import io.dropwizard.views.ViewMessageBodyWriter;
+import io.dropwizard.views.ViewRenderer;
 import org.junit.Test;
 
 import static org.fest.assertions.api.Assertions.assertThat;
@@ -47,7 +49,8 @@ public class HandlebarsViewRendererTest extends JerseyTest {
     @Override
     protected AppDescriptor configure() {
         DefaultResourceConfig config = new DefaultResourceConfig();
-        config.getSingletons().add(new ViewMessageBodyWriter(new MetricRegistry()));
+        ViewRenderer renderer = new HandlebarsViewRenderer();
+        config.getSingletons().add(new ViewMessageBodyWriter(new MetricRegistry(), ImmutableList.of(renderer)));
         config.getSingletons().add(new ExampleResource());
         return new LowLevelAppDescriptor.Builder(config).build();
     }
