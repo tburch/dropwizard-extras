@@ -34,7 +34,7 @@ public class HandlebarsViewRenderer implements ViewRenderer {
 
     @Override
     public boolean isRenderable(View view) {
-        return view.getTemplateName().endsWith(".hbs") || view.getTemplateName().endsWith(".handlebars");
+        return view.getTemplateName().endsWith(".hbs") || view.getTemplateName().endsWith(".handlebars") || view.getTemplateName().endsWith(".mustache");
     }
 
     @Override
