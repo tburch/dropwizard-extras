@@ -8,4 +8,5 @@ env:
     - secure: "CCrJX3kpIHlD1wlKIeVy9szvK85NUmHacAruClCsfNEr0NCTXh6HrLOKYTBHSfXtSEGg2spZ3RdT4VqCO8tSEPNEJJJGHtL68bw7jHeDPvxIOvEIvylkjwzKRVTGFHxlSabv7w+CvCxp8dduC0q7YoVyG5S5I80zg8WYoOJHglg="
 
 after_success:
-  - "[[ $TRAVIS_BRANCH == \"master\" ]] && { python travis/addServer.py; mvn clean deploy --settings ~/.m2/mySettings.xml; };"
+  - "[[ $TRAVIS_BRANCH == \"develop\" ]] && { python travis/addServer.py; mvn clean deploy --settings ~/.m2/mySettings.xml; };"
+  - "[[ $TRAVIS_BRANCH == \"master\" ]] && { python travis/addServer.py; chmod -R 777 travis/mvn-release-flow.sh; ./travis/mvn-release-flow.sh; };"
