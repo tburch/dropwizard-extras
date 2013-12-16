@@ -16,6 +16,7 @@
 
     <modules>
         <module>dropwizard-extras-view-handlebars</module>
+        <module>dropwizard-extras-view-markdown</module>
     </modules>
 
 </project>
