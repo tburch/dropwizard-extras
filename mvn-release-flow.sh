@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Maven release using gitflow stuff
-# from https://github.com/vdemeester/java-config/blob/master/bin/mvn-release-flow, based on http://vincent.demeester.fr/2012/07/maven-release-gitflow/ and https://gist.github.com/searls/1043970
+# based on ideas from  https://github.com/vdemeester/java-config/blob/master/bin/mvn-release-flow, http://vincent.demeester.fr/2012/07/maven-release-gitflow/, and https://gist.github.com/searls/1043970
 #
 # 0. verify the precense of needed command (git, mvn, …)
 # 1. get the stable version to come (but let me specify it)
