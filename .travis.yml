@@ -6,6 +6,7 @@ env:
   global:
     - SONATYPE_USERNAME=tburch
     - secure: "CCrJX3kpIHlD1wlKIeVy9szvK85NUmHacAruClCsfNEr0NCTXh6HrLOKYTBHSfXtSEGg2spZ3RdT4VqCO8tSEPNEJJJGHtL68bw7jHeDPvxIOvEIvylkjwzKRVTGFHxlSabv7w+CvCxp8dduC0q7YoVyG5S5I80zg8WYoOJHglg="
+    - secure: "KOcFC6LPzbSuGS9tA8YIcWEd703sqABlRu31Z1FMElDXWG9DodDUL3YiRn//2b6hlAIA7FDtd23Vk2DDN2SHt9Ym15MOC1BgJB0ZEXOzgBWx4ADODimb2izAKYPLsdCCxtL8KzE9C/yFiKIuhTJnbrTheKTIyo4R5mIuoF9YQVk="
 
 after_success:
   - "[[ $TRAVIS_BRANCH == \"develop\" ]] && { python travis/addServer.py; mvn clean deploy --settings ~/.m2/mySettings.xml; };"
