@@ -9,3 +9,4 @@ env:
 
 after_success:
   - "[[ $TRAVIS_BRANCH == \"develop\" ]] && { python travis/addServer.py; mvn clean deploy --settings ~/.m2/mySettings.xml; };"
+  - "[[ $TRAVIS_BRANCH == \"master\" ]] && { python travis/addServer.py; chmod -R 777 travis/mvn-release-flow.sh; ./travis/mvn-release-flow.sh; };"
