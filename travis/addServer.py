@@ -43,7 +43,7 @@ settings = m2.getElementsByTagName("settings")[0]
 createAndAppendServerNode("sonatype-nexus-snapshots")
 createAndAppendServerNode("sonatype-nexus-staging")
 
-m2Str = m2.toxml()
+m2Str = m2.toprettyxml()
 f = open(homedir + '/.m2/mySettings.xml', 'w')
 f.write(m2Str)
 f.close()
