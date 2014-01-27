@@ -6,3 +6,4 @@
 *.ear
 dropwizard-extras-view/dropwizard-extras-view-handlebars/target
 dropwizard-extras-view/dropwizard-extras-view-markdown/target
+dropwizard-extras-config/target
