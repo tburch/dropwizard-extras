@@ -9,16 +9,14 @@ import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.setup.Environment;
 import io.dropwizard.util.Duration;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import lombok.experimental.Builder;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Getter
 @Setter
+@ToString
 @NoArgsConstructor
-@AllArgsConstructor
 public class ExecutorServiceConfig {
 
     @JsonProperty
