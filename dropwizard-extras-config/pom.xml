@@ -53,6 +53,12 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+            <version>1.0.0.Beta1</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
 </project>
