@@ -1,5 +1,7 @@
-##Enable [Handlebars](http://handlebarsjs.com/) views for your Dropwizard service:
+##dropwizard-extras-view-handlebars
+dropwizard-extras-view-handlebars is an addon for the [Dropwizard](http://www.dropwizard.io/) framework to enable rendering of [Handlebars](http://handlebarsjs.com/) templates. This is only supported in Dropwizard version 0.7.0 and greater.
 
+##Usage
 Add the "dropwizard-extras-view-handlebars" dependency:
 
 	<dependency>
@@ -25,4 +27,4 @@ If you don't need to have a specific instance of Handlebars, add the ViewBundle 
 		bootstrap.addBundle(new ViewBundle());
 	}
 
-Once enabled, Handlebars views can be rendered like all other [Dropwizard Views](http://dropwizard.codahale.com/manual/views/).
+Once added to your Bootstrap, Handlebars views can be rendered like all other [Dropwizard Views](http://www.dropwizard.io/manual/views/).

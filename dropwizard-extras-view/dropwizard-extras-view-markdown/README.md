@@ -1,4 +1,7 @@
-##Enable [Markdown](http://daringfireball.net/projects/markdown/) views for your Dropwizard service:
+##dropwizard-extras-view-markdown
+dropwizard-extras-view-markdown is an addon for the [Dropwizard](http://www.dropwizard.io/) framework to enable rendering of [Markdown](http://daringfireball.net/projects/markdown/) templates. This is only supported in Dropwizard version 0.7.0 and greater.
+
+##Enable Markdown views for your Dropwizard service:
 
 Add the "dropwizard-extras-view-markdown" dependency:
 
@@ -24,4 +27,4 @@ If you don't need to have a specific instance of a Markdown4jProcessor, add the 
 		bootstrap.addBundle(new ViewBundle());
 	}
 
-Once enabled, Markdown views can be rendered like all other [Dropwizard Views](http://dropwizard.codahale.com/manual/views/).
+Once added to your Bootstrap, Markdown views can be rendered like all other [Dropwizard Views](http://www.dropwizard.io/manual/views/).
