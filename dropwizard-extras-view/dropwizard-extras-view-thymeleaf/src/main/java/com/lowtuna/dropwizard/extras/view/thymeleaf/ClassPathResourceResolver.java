@@ -1,12 +1,10 @@
 package com.lowtuna.dropwizard.extras.view.thymeleaf;
 
-import lombok.extern.slf4j.Slf4j;
 import org.thymeleaf.TemplateProcessingParameters;
 import org.thymeleaf.resourceresolver.IResourceResolver;
 
 import java.io.InputStream;
 
-@Slf4j
 public class ClassPathResourceResolver implements IResourceResolver {
     public static final String NAME = "CLASSPATH";
 

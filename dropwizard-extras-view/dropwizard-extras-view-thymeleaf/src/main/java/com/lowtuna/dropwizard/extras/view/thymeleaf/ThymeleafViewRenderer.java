@@ -2,13 +2,10 @@ package com.lowtuna.dropwizard.extras.view.thymeleaf;
 
 import io.dropwizard.views.View;
 import io.dropwizard.views.ViewRenderer;
-import lombok.extern.slf4j.Slf4j;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.AbstractContext;
 import org.thymeleaf.context.Context;
-import org.thymeleaf.exceptions.TemplateEngineException;
 import org.thymeleaf.exceptions.TemplateInputException;
-import org.thymeleaf.exceptions.TemplateOutputException;
 import org.thymeleaf.exceptions.TemplateProcessingException;
 import org.thymeleaf.templateresolver.TemplateResolver;
 
@@ -56,7 +53,7 @@ public class ThymeleafViewRenderer implements ViewRenderer {
             if (e instanceof TemplateInputException) {
                 throw new FileNotFoundException(view.getTemplateName());
             }
-           throw e;
+            throw e;
         } finally {
             outputStreamWriter.close();
         }
