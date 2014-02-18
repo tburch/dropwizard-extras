@@ -19,7 +19,6 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.util.Locale;
 
-@Slf4j
 public class ThymeleafViewRenderer implements ViewRenderer {
     private final TemplateEngine templateEngine;
 
@@ -50,20 +49,14 @@ public class ThymeleafViewRenderer implements ViewRenderer {
         context.setVariable(view.getClass().getSimpleName(), view);
 
         OutputStreamWriter outputStreamWriter = new OutputStreamWriter(output);
+
         try {
             templateEngine.process(view.getTemplateName(), context, outputStreamWriter);
         } catch (TemplateProcessingException e) {
             if (e instanceof TemplateInputException) {
                 throw new FileNotFoundException(view.getTemplateName());
             }
-            Throwable cause = e.getCause();
-            if (cause instanceof TemplateOutputException) {
-
-            } else {
-
-            }
-        } catch (TemplateEngineException e) {
-
+           throw e;
         } finally {
             outputStreamWriter.close();
         }
