@@ -12,7 +12,7 @@
 
     <groupId>com.lowtuna.dropwizard-extras</groupId>
     <artifactId>dropwizard-extras-view-thymeleaf</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <name>Thymeleaf Dropwizard ViewRenderer</name>
 
     <properties>
         <org.thymeleaf.version>2.1.2.RELEASE</org.thymeleaf.version>
