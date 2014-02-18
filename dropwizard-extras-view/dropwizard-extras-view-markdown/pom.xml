@@ -14,10 +14,6 @@
     <artifactId>dropwizard-extras-view-markdown</artifactId>
     <name>Markdown Dropwizard ViewRenderer</name>
 
-    <properties>
-        <jersey.version>1.17.1</jersey.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>io.dropwizard</groupId>

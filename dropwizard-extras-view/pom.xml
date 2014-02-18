@@ -14,6 +14,10 @@
     <name>Dropwizard View Extras</name>
     <description>Dropwizard View Extras is a collection of useful bundles for rendering views</description>
 
+    <properties>
+        <jersey.version>1.18</jersey.version>
+    </properties>
+
     <modules>
         <module>dropwizard-extras-view-handlebars</module>
         <module>dropwizard-extras-view-markdown</module>
