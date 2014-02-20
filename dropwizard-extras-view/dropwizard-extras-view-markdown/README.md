@@ -18,7 +18,7 @@ If you want to use a specific instance of a Markdown4jProcessor (so you can use 
  		    .addHtmlAttribute("target", "_blank", "a")
  		    .register(new MyPlugin());
  		MarkdownViewRenderer mdRenderer = new MarkdownViewRenderer(md);
-		bootstrap.addBundle(new ViewBundle(ImmutableList.of(mdRenderer)));
+		bootstrap.addBundle(new ViewBundle(ImmutableList.<ViewRenderer>of(mdRenderer)));
 	}
 	
 If you don't need to have a specific instance of a Markdown4jProcessor, add the ViewBundle in the initialize method of your Service class:

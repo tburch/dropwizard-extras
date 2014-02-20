@@ -18,7 +18,7 @@ If you want to use a specific instance of Handlebars (so you can use your own He
  			.with(new ClassPathTemplateLoader(StringUtils.EMPTY, StringUtils.EMPTY))
  			.with(new HighConcurrencyTemplateCache());
  		HandlebarsViewRenderer hsbRenderer = new HandlebarsViewRenderer(hbs);
-		bootstrap.addBundle(new ViewBundle(ImmutableList.of(hsbRenderer)));
+		bootstrap.addBundle(new ViewBundle(ImmutableList.<ViewRenderer>of(hsbRenderer)));
 	}
 	
 If you don't need to have a specific instance of Handlebars, add the ViewBundle in the initialize method of your Service class:

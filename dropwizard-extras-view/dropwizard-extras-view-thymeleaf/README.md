@@ -16,7 +16,7 @@ If you want to use a specific instance of a Thymeleaf [TemplateEngine](http://ww
 	public void initialize(Bootstrap<MyConfiguration> bootstrap) {
  		TemplateEngine te = new TemplateEngine();
  		ViewRenderer teRenderer = new ThymeleafViewRenderer(te);
-		bootstrap.addBundle(new ViewBundle(ImmutableList.of(teRenderer)));
+		bootstrap.addBundle(new ViewBundle(ImmutableList.<ViewRenderer>of(teRenderer)));
 	}
 	
 If you don't need to have a specific instance of a TemplateEngine, add the ViewBundle in the initialize method of your Service class:
