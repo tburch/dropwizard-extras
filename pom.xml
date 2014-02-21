@@ -14,6 +14,7 @@
 
     <modules>
         <module>dropwizard-extras-config</module>
+        <module>dropwizard-extras-heroku</module>
         <module>dropwizard-extras-view</module>
     </modules>
 
