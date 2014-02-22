@@ -1,14 +1,15 @@
 package com.lowtuna.dropwizard.extras.config;
 
-import java.util.concurrent.ScheduledExecutorService;
-
-import javax.validation.constraints.Min;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.setup.Environment;
-import lombok.*;
-import lombok.experimental.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.validation.constraints.Min;
+import java.util.concurrent.ScheduledExecutorService;
 
 @Getter
 @Setter

@@ -11,7 +11,6 @@ import org.elasticsearch.client.Client;
 import org.elasticsearch.common.settings.ImmutableSettings;
 import org.elasticsearch.node.Node;
 import org.elasticsearch.node.NodeBuilder;
-import org.hibernate.validator.constraints.NotEmpty;
 
 @Data
 @AllArgsConstructor

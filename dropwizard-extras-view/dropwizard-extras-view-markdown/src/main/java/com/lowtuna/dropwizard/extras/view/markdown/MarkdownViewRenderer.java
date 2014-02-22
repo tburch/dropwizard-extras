@@ -1,17 +1,5 @@
 package com.lowtuna.dropwizard.extras.view.markdown;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.PrintWriter;
-import java.io.StringWriter;
-import java.io.Writer;
-import java.util.Locale;
-import java.util.concurrent.ExecutionException;
-
-import javax.ws.rs.WebApplicationException;
-
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
@@ -19,6 +7,11 @@ import io.dropwizard.views.View;
 import io.dropwizard.views.ViewRenderer;
 import org.apache.commons.io.IOUtils;
 import org.markdown4j.Markdown4jProcessor;
+
+import javax.ws.rs.WebApplicationException;
+import java.io.*;
+import java.util.Locale;
+import java.util.concurrent.ExecutionException;
 
 public class MarkdownViewRenderer implements ViewRenderer {
     private final LoadingCache<View, String> templateCache;

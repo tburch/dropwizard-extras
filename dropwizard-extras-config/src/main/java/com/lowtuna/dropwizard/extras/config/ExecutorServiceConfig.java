@@ -1,17 +1,18 @@
 package com.lowtuna.dropwizard.extras.config;
 
-import java.util.concurrent.ExecutorService;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import io.dropwizard.setup.Environment;
+import io.dropwizard.util.Duration;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.dropwizard.setup.Environment;
-import io.dropwizard.util.Duration;
-import lombok.*;
-import lombok.experimental.Builder;
-import org.hibernate.validator.constraints.NotEmpty;
+import java.util.concurrent.ExecutorService;
 
 @Getter
 @Setter

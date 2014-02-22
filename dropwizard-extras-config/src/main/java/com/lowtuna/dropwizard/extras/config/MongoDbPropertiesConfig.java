@@ -1,20 +1,19 @@
 package com.lowtuna.dropwizard.extras.config;
 
-import java.net.*;
-
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.mongodb.DB;
 import com.mongodb.MongoClient;
-import io.dropwizard.validation.ValidationMethod;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import java.net.UnknownHostException;
 
 @Data
 @AllArgsConstructor

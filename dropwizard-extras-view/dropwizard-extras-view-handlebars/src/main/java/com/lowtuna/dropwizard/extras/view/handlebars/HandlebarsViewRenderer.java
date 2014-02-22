@@ -1,12 +1,5 @@
 package com.lowtuna.dropwizard.extras.view.handlebars;
 
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.util.Locale;
-
-import javax.ws.rs.WebApplicationException;
-
 import com.github.jknack.handlebars.Context;
 import com.github.jknack.handlebars.Handlebars;
 import com.github.jknack.handlebars.Template;
@@ -18,6 +11,12 @@ import com.github.jknack.handlebars.io.ClassPathTemplateLoader;
 import io.dropwizard.views.View;
 import io.dropwizard.views.ViewRenderer;
 import org.apache.commons.lang3.StringUtils;
+
+import javax.ws.rs.WebApplicationException;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.util.Locale;
 
 public class HandlebarsViewRenderer implements ViewRenderer {
     public static final String LOCAL_MODEL_ATTR_NAME = "locale";
