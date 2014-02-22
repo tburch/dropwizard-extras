@@ -8,7 +8,7 @@ import com.mongodb.DB;
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type", visible = false, include = JsonTypeInfo.As.EXTERNAL_PROPERTY)
 @JsonSubTypes({
         @JsonSubTypes.Type(value = MongoDbPropertiesConfig.class, name = "properties"),
-        @JsonSubTypes.Type(value = MongoDbUriConfig.class, name = "url")
+        @JsonSubTypes.Type(value = MongoDbUriConfig.class, name = "uri")
 })
 
 @JsonIgnoreProperties(ignoreUnknown = true, value = "type")
