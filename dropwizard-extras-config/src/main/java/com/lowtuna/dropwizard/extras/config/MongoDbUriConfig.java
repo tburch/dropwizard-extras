@@ -7,6 +7,7 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -18,6 +19,7 @@ import java.net.UnknownHostException;
 @AllArgsConstructor
 @NoArgsConstructor
 @Slf4j
+@EqualsAndHashCode(callSuper = true)
 public class MongoDbUriConfig extends MongoDbConfig {
 
     @NotEmpty
