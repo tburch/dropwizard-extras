@@ -15,7 +15,9 @@ import org.apache.commons.lang3.StringUtils;
 public class ConfiguredHandlebarsViewRenderBundle<T extends Configuration> implements ConfiguredBundle<T> {
 
     public Handlebars getInstance(T configuration) {
-        return new Handlebars().with(new ClassPathTemplateLoader(StringUtils.EMPTY, StringUtils.EMPTY)).with(new HighConcurrencyTemplateCache());
+        return new Handlebars()
+                .with(new ClassPathTemplateLoader(StringUtils.EMPTY, StringUtils.EMPTY))
+                .with(new HighConcurrencyTemplateCache());
     }
 
     @Override
