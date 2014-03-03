@@ -20,11 +20,13 @@ import java.util.Locale;
 import java.util.concurrent.ExecutionException;
 
 public class MarkdownViewRenderer implements ViewRenderer {
+    static final Markdown4jProcessor BASIC_MARKDOWN_PROCESSOR = new Markdown4jProcessor();
+
     private final LoadingCache<View, String> templateCache;
     private final Markdown4jProcessor processor;
 
     public MarkdownViewRenderer() {
-        this(new Markdown4jProcessor());
+        this(BASIC_MARKDOWN_PROCESSOR);
     }
 
     public MarkdownViewRenderer(Markdown4jProcessor processor) {

@@ -14,9 +14,14 @@ Add the "dropwizard-extras-view-thymeleaf" dependency:
 If you want to use a specific instance of a Thymeleaf [TemplateEngine](http://www.thymeleaf.org/apidocs/thymeleaf/2.1.2.RELEASE/org/thymeleaf/TemplateEngine.html) (so you can use custom [Dialects](http://www.thymeleaf.org/apidocs/thymeleaf/2.1.2.RELEASE/org/thymeleaf/dialect/IDialect.html), [Template Resolvers](http://www.thymeleaf.org/apidocs/thymeleaf/2.1.2.RELEASE/org/thymeleaf/templateresolver/ITemplateResolver.html), [Message Resolvers](http://www.thymeleaf.org/apidocs/thymeleaf/2.1.2.RELEASE/org/thymeleaf/messageresolver/IMessageResolver.html), etc.), add the ViewBundle with the TemplateEngine instance in the initialize method of your Service class:
 
 	public void initialize(Bootstrap<MyConfiguration> bootstrap) {
- 		TemplateEngine te = new TemplateEngine();
- 		ViewRenderer teRenderer = new ThymeleafViewRenderer(te);
-		bootstrap.addBundle(new ViewBundle(ImmutableList.<ViewRenderer>of(teRenderer)));
+		bootstrap.addBundle(new ConfiguredThymeleafViewBundle<MyConfiguration>() {
+            @Override
+            public TemplateEngine getInstance(MyConfiguration configuration) {
+                //either load the TemplateEngine instance from your config or instantiate it here
+                TemplateEngine te = new TemplateEngine();
+                return te;
+            }
+        });
 	}
 	
 If you don't need to have a specific instance of a TemplateEngine, add the ViewBundle in the initialize method of your Service class:

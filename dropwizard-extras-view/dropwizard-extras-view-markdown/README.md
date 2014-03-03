@@ -14,11 +14,16 @@ Add the "dropwizard-extras-view-markdown" dependency:
 If you want to use a specific instance of a Markdown4jProcessor (so you can use your own Plugins, custom HTML rendering, etc.), add the ViewBundle with the Markdown4jProcessor instance in the initialize method of your Service class:
 
 	public void initialize(Bootstrap<MyConfiguration> bootstrap) {
- 		Markdown4jProcessor md = new Markdown4jProcessor()
- 		    .addHtmlAttribute("target", "_blank", "a")
- 		    .register(new MyPlugin());
- 		MarkdownViewRenderer mdRenderer = new MarkdownViewRenderer(md);
-		bootstrap.addBundle(new ViewBundle(ImmutableList.<ViewRenderer>of(mdRenderer)));
+ 		bootstrap.addBundle(new ConfiguredMarkdownViewBundle<MyConfiguration>() {
+            @Override
+            public Markdown4jProcessor getInstance(MyConfiguration configuration) {
+                //either load the Markdown4jProcessor instance from your config or instantiate it here
+                Markdown4jProcessor md = new Markdown4jProcessor()
+                 		    .addHtmlAttribute("target", "_blank", "a")
+                 		    .register(new MyPlugin());
+                return md;
+            }
+        });
 	}
 	
 If you don't need to have a specific instance of a Markdown4jProcessor, add the ViewBundle in the initialize method of your Service class:

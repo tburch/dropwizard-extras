@@ -21,10 +21,12 @@ import java.util.Locale;
 public class HandlebarsViewRenderer implements ViewRenderer {
     public static final String LOCAL_MODEL_ATTR_NAME = "locale";
 
+    static final Handlebars CLASSPATH_CACHING_HANDLEBARS = (new Handlebars()).with(new ClassPathTemplateLoader(StringUtils.EMPTY, StringUtils.EMPTY)).with(new HighConcurrencyTemplateCache());
+
     private final Handlebars handlebars;
 
     public HandlebarsViewRenderer() {
-        this(new Handlebars().with(new ClassPathTemplateLoader(StringUtils.EMPTY, StringUtils.EMPTY)).with(new HighConcurrencyTemplateCache()));
+        this(CLASSPATH_CACHING_HANDLEBARS);
     }
 
     public HandlebarsViewRenderer(Handlebars handlebars) {
