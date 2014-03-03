@@ -1,5 +1,6 @@
 package com.lowtuna.dropwizard.extras.config;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.setup.Environment;
 import io.dropwizard.util.Duration;
@@ -41,6 +42,7 @@ public class ExecutorServiceConfig {
         this.name = name;
     }
 
+    @JsonIgnore
     public ExecutorService instance(Environment environment) {
         return environment.lifecycle().executorService(name).keepAliveTime(keepAlive).minThreads(corePoolSize).maxThreads(maximumPoolSize).build();
     }

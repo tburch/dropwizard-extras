@@ -1,5 +1,6 @@
 package com.lowtuna.dropwizard.extras.config;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -46,6 +47,7 @@ public class ElasticSearchConfig {
         this.settings = settings;
     }
 
+    @JsonIgnore
     public Node nodeInstance() {
         settings.put("http.enabled", http);
         if (StringUtils.isNotEmpty(dataPath)) {
@@ -65,6 +67,7 @@ public class ElasticSearchConfig {
         return nodeBuilder.node();
     }
 
+    @JsonIgnore
     public Client clientInstance() {
         Node node = nodeInstance();
         return node.client();

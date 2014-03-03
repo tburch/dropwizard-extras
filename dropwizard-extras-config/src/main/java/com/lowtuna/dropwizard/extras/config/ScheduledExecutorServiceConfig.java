@@ -1,5 +1,6 @@
 package com.lowtuna.dropwizard.extras.config;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.setup.Environment;
 import lombok.Getter;
@@ -29,6 +30,7 @@ public class ScheduledExecutorServiceConfig {
         this.name = name;
     }
 
+    @JsonIgnore
     public ScheduledExecutorService instance(Environment environment) {
         return environment.lifecycle().scheduledExecutorService(name).threads(poolSize).build();
     }

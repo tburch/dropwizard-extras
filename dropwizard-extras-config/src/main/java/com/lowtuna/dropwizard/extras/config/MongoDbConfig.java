@@ -1,5 +1,6 @@
 package com.lowtuna.dropwizard.extras.config;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
@@ -13,5 +14,6 @@ import com.mongodb.DB;
 
 @JsonIgnoreProperties(ignoreUnknown = true, value = "type")
 public abstract class MongoDbConfig {
+    @JsonIgnore
     public abstract DB instance();
 }
