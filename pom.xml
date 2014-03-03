@@ -21,7 +21,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <io.dropwizard.version>0.7.0-rc1</io.dropwizard.version>
+        <io.dropwizard.version>0.7.0-rc2</io.dropwizard.version>
     </properties>
 
     <developers>
