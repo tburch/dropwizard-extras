@@ -91,6 +91,11 @@
                 <artifactId>dropwizard-core</artifactId>
                 <version>${io.dropwizard.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.lowtuna.dropwizard-extras</groupId>
+                <artifactId>dropwizard-extras-config</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
