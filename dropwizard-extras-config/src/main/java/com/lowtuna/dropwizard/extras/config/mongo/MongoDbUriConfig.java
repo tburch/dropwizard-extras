@@ -1,4 +1,4 @@
-package com.lowtuna.dropwizard.extras.config;
+package com.lowtuna.dropwizard.extras.config.mongo;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -39,4 +39,5 @@ public class MongoDbUriConfig extends MongoDbConfig {
             throw new IllegalStateException("Couldn't connect to MongoDB at " + StringUtils.join(mongoClientURI.getHosts(), ", "));
         }
     }
+
 }

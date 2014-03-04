@@ -1,4 +1,4 @@
-package com.lowtuna.dropwizard.extras.config;
+package com.lowtuna.dropwizard.extras.config.mongo;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;

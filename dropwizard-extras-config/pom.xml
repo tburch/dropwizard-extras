@@ -18,7 +18,10 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>0.12.0</version>
-            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
         </dependency>
         <!-- We need slf4j api because we're using the @Slf4j anotation from lombok -->
         <dependency>
@@ -48,10 +51,6 @@
             <artifactId>mongo-java-driver</artifactId>
             <version>2.11.3</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
         </dependency>
         <dependency>
             <groupId>org.elasticsearch</groupId>
