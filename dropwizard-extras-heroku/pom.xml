@@ -31,6 +31,25 @@
             <artifactId>slf4j-api</artifactId>
             <version>1.7.5</version>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>0.12.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-core</artifactId>
+            <version>${io.dropwizard.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-client</artifactId>
+            <version>${io.dropwizard.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.lowtuna.dropwizard-extras</groupId>
+            <artifactId>dropwizard-extras-config</artifactId>
+        </dependency>
     </dependencies>
     
 </project>
