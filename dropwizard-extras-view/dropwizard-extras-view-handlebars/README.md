@@ -31,4 +31,4 @@ If you don't need to have a specific instance of Handlebars, add the ViewBundle 
 		bootstrap.addBundle(new ViewBundle());
 	}
 
-Once added to your Bootstrap, Handlebars views can be rendered like all other [Dropwizard Views](http://www.dropwizard.io/manual/views/).
+Once added to your Bootstrap, Handlebars views can be rendered like all other [Dropwizard Views](http://dropwizard.io/manual/views.html).

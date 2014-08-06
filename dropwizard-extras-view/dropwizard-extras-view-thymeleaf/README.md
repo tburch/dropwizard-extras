@@ -32,7 +32,7 @@ If you don't need to have a specific instance of a TemplateEngine, add the ViewB
 
 ##Rendering Thymeleaf views
 
-Once added to your Bootstrap, Thymeleaf views can be rendered similar to [Dropwizard Views](http://www.dropwizard.io/manual/views/).
+Once added to your Bootstrap, Thymeleaf views can be rendered similar to [Dropwizard Views](http://dropwizard.io/manual/views.html).
 The only change is you need to prefix your variable names with the class name of your view class. For example if you were trying to render the ```name``` field on your ```PersonView``` class, you'd use ```${PersonView.name}``` in your template.
 
 
