@@ -22,6 +22,7 @@
         <module>dropwizard-extras-view-handlebars</module>
         <module>dropwizard-extras-view-markdown</module>
         <module>dropwizard-extras-view-thymeleaf</module>
+        <module>dropwizard-extras-view-twig</module>
     </modules>
 
 </project>
