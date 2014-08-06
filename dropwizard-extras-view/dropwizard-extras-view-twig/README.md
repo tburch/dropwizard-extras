@@ -32,6 +32,6 @@ If you don't need to have a specific instance of a AbstractFunctionRepository, a
 
 ##Rendering Twig views
 
-Once added to your Bootstrap, Twig views can be rendered similar to [Dropwizard Views](http://www.dropwizard.io/manual/views/). All of the View's declared fields are exposed to the template.
+Once added to your Bootstrap, Twig views can be rendered similar to [Dropwizard Views](http://dropwizard.io/manual/views.html). All of the View's declared fields are exposed to the template.
 
 
