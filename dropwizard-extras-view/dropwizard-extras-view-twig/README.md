@@ -30,7 +30,7 @@ If you don't need to have a specific instance of a AbstractFunctionRepository, a
 		bootstrap.addBundle(new ViewBundle());
 	}
 
-##Rendering Thymeleaf views
+##Rendering Twig views
 
 Once added to your Bootstrap, Twig views can be rendered similar to [Dropwizard Views](http://www.dropwizard.io/manual/views/).
 
