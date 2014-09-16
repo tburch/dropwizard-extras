@@ -44,6 +44,12 @@ public class ThymeleafViewRendererTest extends JerseyTest {
         public BadView showBad() {
             return new BadView();
         }
+
+        @GET
+        @Path("/map")
+        public MapBackedView showMapData() { return new MapBackedView("/mapBackedView.html")
+                                                        .put("msg","OK")
+                                                        .put("name", "Map Thyme"); }
     }
 
     @Override
@@ -77,6 +83,13 @@ public class ThymeleafViewRendererTest extends JerseyTest {
             assertThat(e.getResponse().getEntity(String.class))
                     .isEqualTo("<html><head><title>Missing Template</title></head><body><h1>Missing Template</h1><p>/woo-oo-ahh.html</p></body></html>");
         }
+    }
+
+    @Test
+    public void testMapBackedView() throws Exception
+    {
+        String response = client().resource(getBaseURI() + "test/map").get(String.class);
+        assertThat(response).isEqualTo("<h1><span>Map Thyme</span></h1><h2><span>OK</span></h2>");
     }
 
 }
