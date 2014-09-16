@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.util.Locale;
+import java.util.Map;
 
 public class ThymeleafViewRenderer implements ViewRenderer {
     private final TemplateEngine templateEngine;
@@ -43,7 +44,19 @@ public class ThymeleafViewRenderer implements ViewRenderer {
     @Override
     public void render(View view, Locale locale, OutputStream output) throws IOException, WebApplicationException {
         AbstractContext context = new Context(locale);
-        context.setVariable(view.getClass().getSimpleName(), view);
+
+        if(view instanceof MapBackedView)
+        {
+            for(Map.Entry<String,Object> entry : ((MapBackedView)view).getMap().entrySet() )
+            {
+                context.setVariable(entry.getKey(), entry.getValue());
+            }
+
+        }
+        else
+        {
+            context.setVariable(view.getClass().getSimpleName(), view);
+        }
 
         OutputStreamWriter outputStreamWriter = new OutputStreamWriter(output);
 
